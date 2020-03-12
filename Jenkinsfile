@@ -11,10 +11,7 @@ pipeline {
    }
    post {
         always {
-            script {
-                // Publish all Html reports
-               archiveArtifacts 'artifact.txt'
-            }
+           archiveArtifacts 'artifact.txt' 
         }
      }
 }
