@@ -12,15 +12,7 @@ pipeline {
         always {
             script {
                 // Publish all Html reports
-                publishHTML([
-                        allowMissing: true,
-                        alwaysLinkToLastBuild: true,
-                        keepAll: true,
-                        reportDir: "/",
-                        reportFiles: 'artifact.txt',
-                        reportName: 'Artifact',
-                        reportTitles: 'Artifacts'
-                    ])
+               archiveArtifacts 'artifact.txt'
             }
         }
      }
